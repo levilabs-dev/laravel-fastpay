@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Nizaamomer\LaravelFastpay\Events;
+namespace LeviLabs\LaravelFastpay\Events;
 
 use Illuminate\Foundation\Events\Dispatchable;
-use Nizaamomer\LaravelFastpay\Data\PaymentValidationData;
+use LeviLabs\LaravelFastpay\Data\PaymentValidationData;
 
 final class PaymentValidated
 {

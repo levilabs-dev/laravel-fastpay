@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Nizaamomer\LaravelFastpay\Models;
+namespace LeviLabs\LaravelFastpay\Models;
 
 use Carbon\CarbonImmutable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
-use Nizaamomer\LaravelFastpay\Enums\PaymentStatus;
+use LeviLabs\LaravelFastpay\Enums\PaymentStatus;
 
 /**
  * @property string $store

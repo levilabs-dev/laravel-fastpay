@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Nizaamomer\LaravelFastpay\Data;
+namespace LeviLabs\LaravelFastpay\Data;
 
-use Nizaamomer\LaravelFastpay\Exceptions\FastpayException;
-use Nizaamomer\LaravelFastpay\Support\DeepLink;
+use LeviLabs\LaravelFastpay\Exceptions\FastpayException;
+use LeviLabs\LaravelFastpay\Support\DeepLink;
 
 final readonly class QrData
 {

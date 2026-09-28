@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Nizaamomer\LaravelFastpay\Tests;
+namespace LeviLabs\LaravelFastpay\Tests;
 
-use Nizaamomer\LaravelFastpay\FastpayServiceProvider;
+use LeviLabs\LaravelFastpay\FastpayServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra

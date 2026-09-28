@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Nizaamomer\LaravelFastpay\Services;
+namespace LeviLabs\LaravelFastpay\Services;
 
 use Illuminate\Support\Facades\Log;
-use Nizaamomer\LaravelFastpay\Contracts\FastpayQrServiceContract;
-use Nizaamomer\LaravelFastpay\Data\PaymentValidationData;
-use Nizaamomer\LaravelFastpay\Data\QrData;
-use Nizaamomer\LaravelFastpay\Data\QrStatusData;
-use Nizaamomer\LaravelFastpay\Data\RefundData;
-use Nizaamomer\LaravelFastpay\Events\PaymentRefunded;
-use Nizaamomer\LaravelFastpay\Events\PaymentValidated;
-use Nizaamomer\LaravelFastpay\Exceptions\FastpayException;
-use Nizaamomer\LaravelFastpay\Services\Concerns\TalksToFastpay;
+use LeviLabs\LaravelFastpay\Contracts\FastpayQrServiceContract;
+use LeviLabs\LaravelFastpay\Data\PaymentValidationData;
+use LeviLabs\LaravelFastpay\Data\QrData;
+use LeviLabs\LaravelFastpay\Data\QrStatusData;
+use LeviLabs\LaravelFastpay\Data\RefundData;
+use LeviLabs\LaravelFastpay\Events\PaymentRefunded;
+use LeviLabs\LaravelFastpay\Events\PaymentValidated;
+use LeviLabs\LaravelFastpay\Exceptions\FastpayException;
+use LeviLabs\LaravelFastpay\Services\Concerns\TalksToFastpay;
 
 /**
  * FastPay's QR vending API — for vending machines, kiosks, POS screens and

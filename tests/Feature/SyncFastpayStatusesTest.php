@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Http;
-use Nizaamomer\LaravelFastpay\Enums\PaymentStatus;
-use Nizaamomer\LaravelFastpay\Models\FastpayPayment;
+use LeviLabs\LaravelFastpay\Enums\PaymentStatus;
+use LeviLabs\LaravelFastpay\Models\FastpayPayment;
 
 it('re-checks pending payments', function () {
     FastpayPayment::query()->create([

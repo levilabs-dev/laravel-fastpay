@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `nizaamomer/laravel-fastpay` are documented here.
+All notable changes to `levilabs/laravel-fastpay` are documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Package namespace and Composer name moved to **Levi Labs** (`levilabs/laravel-fastpay`, `LeviLabs\LaravelFastpay`). The former `nizaamomer/laravel-fastpay` package should be abandoned on Packagist with replacement `levilabs/laravel-fastpay`.
 - `QrData::deepLink(string $clientUri, string $orderId)` is now `deepLink(string $orderId, ?string $clientUri = null)` — `$clientUri` defaults to `config('fastpay.client_uri')`, so the common call is just `$qr->deepLink($orderId)`. Pass `$clientUri` explicitly only to override the configured default (e.g. a multi-brand app). Throws `InvalidArgumentException` if neither is set. **Breaking**: the parameter order changed and `$clientUri` moved after `$orderId`.
 
 ### Fixed
@@ -28,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Payment Gateway**: `FastpayPayment::initiate()`, `validate()`, `refund()`, `refundStatus()`.
 - **QR Vending**: `FastpayQr::generate()`, `validate()`, `refund()`.
-- Mobile deep-link builder (`QrData::deepLink()` / `Nizaamomer\LaravelFastpay\Support\DeepLink`) for Android/iOS/Flutter FastPay-app handoff.
+- Mobile deep-link builder (`QrData::deepLink()` / `LeviLabs\LaravelFastpay\Support\DeepLink`) for Android/iOS/Flutter FastPay-app handoff.
 - Typed DTOs (`PaymentInitiationData`, `PaymentValidationData`, `RefundData`, `RefundValidationData`, `QrData`, `CartItem`) and `PaymentStatus` enum for every FastPay response shape.
 - Multi-store support via the `stores` array in `config/fastpay.php`.
 - Automatic persistence: every initiate/validate/refund call fires an event that upserts into `fastpay_payments`/`fastpay_refunds` — no manual tracking code needed.
@@ -43,4 +44,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Order IDs and MSISDNs are format-validated before any request is sent.
 - Amounts are validated against FastPay's constraints (greater than zero; 1000 IQD minimum for QR payments) before any request is sent.
 
-[1.0.0]: https://github.com/nizaamomer/laravel-fastpay/releases/tag/v1.0.0
+[1.0.0]: https://github.com/levilabs-dev/laravel-fastpay/releases/tag/v1.0.0

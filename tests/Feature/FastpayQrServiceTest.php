@@ -3,11 +3,11 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Http;
-use Nizaamomer\LaravelFastpay\Contracts\FastpayQrServiceContract;
-use Nizaamomer\LaravelFastpay\Data\QrData;
-use Nizaamomer\LaravelFastpay\Data\QrStatusData;
-use Nizaamomer\LaravelFastpay\Exceptions\FastpayException;
-use Nizaamomer\LaravelFastpay\Models\FastpayPayment;
+use LeviLabs\LaravelFastpay\Contracts\FastpayQrServiceContract;
+use LeviLabs\LaravelFastpay\Data\QrData;
+use LeviLabs\LaravelFastpay\Data\QrStatusData;
+use LeviLabs\LaravelFastpay\Exceptions\FastpayException;
+use LeviLabs\LaravelFastpay\Models\FastpayPayment;
 
 it('generates a QR code', function () {
     Http::fake([

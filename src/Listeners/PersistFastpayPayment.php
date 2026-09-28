@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Nizaamomer\LaravelFastpay\Listeners;
+namespace LeviLabs\LaravelFastpay\Listeners;
 
-use Nizaamomer\LaravelFastpay\Events\PaymentInitiated;
-use Nizaamomer\LaravelFastpay\Events\PaymentRefunded;
-use Nizaamomer\LaravelFastpay\Events\PaymentValidated;
-use Nizaamomer\LaravelFastpay\Models\FastpayPayment;
-use Nizaamomer\LaravelFastpay\Models\FastpayRefund;
+use LeviLabs\LaravelFastpay\Events\PaymentInitiated;
+use LeviLabs\LaravelFastpay\Events\PaymentRefunded;
+use LeviLabs\LaravelFastpay\Events\PaymentValidated;
+use LeviLabs\LaravelFastpay\Models\FastpayPayment;
+use LeviLabs\LaravelFastpay\Models\FastpayRefund;
 
 final class PersistFastpayPayment
 {

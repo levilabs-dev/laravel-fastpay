@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Nizaamomer\LaravelFastpay\Services;
+namespace LeviLabs\LaravelFastpay\Services;
 
-use Nizaamomer\LaravelFastpay\Contracts\FastpayPaymentServiceContract;
-use Nizaamomer\LaravelFastpay\Data\CartItem;
-use Nizaamomer\LaravelFastpay\Data\PaymentInitiationData;
-use Nizaamomer\LaravelFastpay\Data\PaymentValidationData;
-use Nizaamomer\LaravelFastpay\Data\RefundData;
-use Nizaamomer\LaravelFastpay\Data\RefundValidationData;
-use Nizaamomer\LaravelFastpay\Events\PaymentInitiated;
-use Nizaamomer\LaravelFastpay\Events\PaymentRefunded;
-use Nizaamomer\LaravelFastpay\Events\PaymentValidated;
-use Nizaamomer\LaravelFastpay\Exceptions\FastpayException;
-use Nizaamomer\LaravelFastpay\Services\Concerns\TalksToFastpay;
+use LeviLabs\LaravelFastpay\Contracts\FastpayPaymentServiceContract;
+use LeviLabs\LaravelFastpay\Data\CartItem;
+use LeviLabs\LaravelFastpay\Data\PaymentInitiationData;
+use LeviLabs\LaravelFastpay\Data\PaymentValidationData;
+use LeviLabs\LaravelFastpay\Data\RefundData;
+use LeviLabs\LaravelFastpay\Data\RefundValidationData;
+use LeviLabs\LaravelFastpay\Events\PaymentInitiated;
+use LeviLabs\LaravelFastpay\Events\PaymentRefunded;
+use LeviLabs\LaravelFastpay\Events\PaymentValidated;
+use LeviLabs\LaravelFastpay\Exceptions\FastpayException;
+use LeviLabs\LaravelFastpay\Services\Concerns\TalksToFastpay;
 
 final class FastpayPaymentService implements FastpayPaymentServiceContract
 {

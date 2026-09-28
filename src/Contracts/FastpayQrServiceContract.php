@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Nizaamomer\LaravelFastpay\Contracts;
+namespace LeviLabs\LaravelFastpay\Contracts;
 
-use Nizaamomer\LaravelFastpay\Data\PaymentValidationData;
-use Nizaamomer\LaravelFastpay\Data\QrData;
-use Nizaamomer\LaravelFastpay\Data\QrStatusData;
-use Nizaamomer\LaravelFastpay\Data\RefundData;
+use LeviLabs\LaravelFastpay\Data\PaymentValidationData;
+use LeviLabs\LaravelFastpay\Data\QrData;
+use LeviLabs\LaravelFastpay\Data\QrStatusData;
+use LeviLabs\LaravelFastpay\Data\RefundData;
 
 interface FastpayQrServiceContract
 {

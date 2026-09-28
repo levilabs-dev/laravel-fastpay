@@ -1,17 +1,17 @@
 # Laravel FastPay SDK — Payment Gateway, QR Vending & Mobile Deep Links
 
 <p>
-<a href="https://packagist.org/packages/nizaamomer/laravel-fastpay"><img src="https://img.shields.io/packagist/v/nizaamomer/laravel-fastpay.svg?style=flat-square&label=Packagist&color=orange" alt="Latest Version on Packagist"></a>
-<a href="https://github.com/nizaamomer/laravel-fastpay/actions"><img src="https://img.shields.io/github/actions/workflow/status/nizaamomer/laravel-fastpay/run-tests.yml?branch=main&label=Tests&style=flat-square" alt="Tests"></a>
-<a href="https://packagist.org/packages/nizaamomer/laravel-fastpay"><img src="https://img.shields.io/packagist/dt/nizaamomer/laravel-fastpay.svg?style=flat-square&label=Downloads&color=blue" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/nizaamomer/laravel-fastpay"><img src="https://img.shields.io/packagist/php-v/nizaamomer/laravel-fastpay.svg?style=flat-square&label=PHP&color=777bb4" alt="PHP Version"></a>
+<a href="https://packagist.org/packages/levilabs/laravel-fastpay"><img src="https://img.shields.io/packagist/v/levilabs/laravel-fastpay.svg?style=flat-square&label=Packagist&color=orange" alt="Latest Version on Packagist"></a>
+<a href="https://github.com/levilabs-dev/laravel-fastpay/actions"><img src="https://img.shields.io/github/actions/workflow/status/levilabs-dev/laravel-fastpay/run-tests.yml?branch=main&label=Tests&style=flat-square" alt="Tests"></a>
+<a href="https://packagist.org/packages/levilabs/laravel-fastpay"><img src="https://img.shields.io/packagist/dt/levilabs/laravel-fastpay.svg?style=flat-square&label=Downloads&color=blue" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/levilabs/laravel-fastpay"><img src="https://img.shields.io/packagist/php-v/levilabs/laravel-fastpay.svg?style=flat-square&label=PHP&color=777bb4" alt="PHP Version"></a>
 <a href="https://laravel.com"><img src="https://img.shields.io/badge/Laravel-11%20%7C%2012%20%7C%2013-ff2d20?style=flat-square" alt="Laravel Version"></a>
-<a href="LICENSE.md"><img src="https://img.shields.io/packagist/l/nizaamomer/laravel-fastpay.svg?style=flat-square&color=success" alt="License"></a>
+<a href="LICENSE.md"><img src="https://img.shields.io/packagist/l/levilabs/laravel-fastpay.svg?style=flat-square&color=success" alt="License"></a>
 </p>
 
 A modern Laravel SDK for [FastPay Iraq](https://www.fast-pay.iq) — one package covering all three ways FastPay lets you accept money: **1) a redirect-based Payment Gateway for the web**, **2) QR Vending for kiosks/POS**, and **3) Mobile Deep Links for native Android/iOS/Flutter apps** — plus refunds, typed DTOs, multi-store support, and automatic status persistence.
 
-Built by [Nizam Omer](https://nizaamomer.com) — [nizaamomer.com](https://nizaamomer.com)
+Maintained by **[Levi Labs](https://levilabs.dev)** ([GitHub](https://github.com/levilabs-dev)) — built by [Nizam Omer](https://nizaamomer.com)
 
 ## Table of Contents
 
@@ -52,7 +52,7 @@ All three parts share the same store credentials, the same response envelope qui
 ## Installation
 
 ```bash
-composer require nizaamomer/laravel-fastpay
+composer require levilabs/laravel-fastpay
 ```
 
 Publish the config file:
@@ -107,7 +107,7 @@ For a normal web checkout: you redirect the customer to a FastPay-hosted payment
 ### Initiating a payment
 
 ```php
-use Nizaamomer\LaravelFastpay\Facades\FastpayPayment;
+use LeviLabs\LaravelFastpay\Facades\FastpayPayment;
 
 $initiation = FastpayPayment::initiate(
     orderId: (string) $order->id, // 8-32 alphanumeric characters, required by FastPay
@@ -200,7 +200,7 @@ For vending machines, kiosks, and POS screens: instead of redirecting to a web p
 ### Generating a QR
 
 ```php
-use Nizaamomer\LaravelFastpay\Facades\FastpayQr;
+use LeviLabs\LaravelFastpay\Facades\FastpayQr;
 
 $qr = FastpayQr::generate($orderId, 1500.00);
 
@@ -272,7 +272,7 @@ The native-side registration and callback handling (Kotlin/Swift/Dart) is FastPa
 Every `initiate()`, `validate()`, and `refund()` call — from any of the three parts — fires an event (`PaymentInitiated`, `PaymentValidated`, `PaymentRefunded`) that this package listens to and upserts into `fastpay_payments`/`fastpay_refunds` automatically — no manual tracking code required. Link your own models via the `payable` polymorphic relation:
 
 ```php
-use Nizaamomer\LaravelFastpay\Models\FastpayPayment;
+use LeviLabs\LaravelFastpay\Models\FastpayPayment;
 
 FastpayPayment::where('order_id', $orderId)->first()?->payable()->associate($order)->save();
 ```
@@ -290,7 +290,7 @@ FastpayPayment::where('order_id', $orderId)->first()?->payable()->associate($ord
 - **Amounts must be greater than zero**, and QR payments enforce FastPay's 1000 IQD minimum, before any request is sent.
 - **Credentials live in `.env`,** never in version control. Rotate `FASTPAY_STORE_PASSWORD` immediately if it's ever exposed.
 
-If you discover a security issue, please email [nizaamomer@gmail.com](mailto:nizaamomer@gmail.com) instead of using the public issue tracker.
+If you discover a security issue, please see [SECURITY.md](SECURITY.md) — do not use the public issue tracker.
 
 ## Testing
 
@@ -308,9 +308,15 @@ See the [FastPay Developer Documentation](https://developer.fast-pay.iq) for the
 
 See [CHANGELOG.md](CHANGELOG.md) for what's changed in each release.
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Author
 
-**Nizam Omer** — [nizaamomer.com](https://nizaamomer.com) · [nizaamomer@gmail.com](mailto:nizaamomer@gmail.com)
+**[Levi Labs](https://levilabs.dev)** — software development studio · [GitHub](https://github.com/levilabs-dev) · [hello@levilabs.dev](mailto:hello@levilabs.dev)
+
+Created and maintained by **Nizam Omer** — [nizaamomer.com](https://nizaamomer.com) · [nizam@nizaamomer.com](mailto:nizam@nizaamomer.com)
 
 ## License
 

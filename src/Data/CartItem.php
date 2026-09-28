@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Nizaamomer\LaravelFastpay\Data;
+namespace LeviLabs\LaravelFastpay\Data;
 
 final readonly class CartItem
 {

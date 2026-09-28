@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Nizaamomer\LaravelFastpay\Facades;
+namespace LeviLabs\LaravelFastpay\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Nizaamomer\LaravelFastpay\Contracts\FastpayQrServiceContract;
-use Nizaamomer\LaravelFastpay\Data\PaymentValidationData;
-use Nizaamomer\LaravelFastpay\Data\QrData;
-use Nizaamomer\LaravelFastpay\Data\QrStatusData;
-use Nizaamomer\LaravelFastpay\Data\RefundData;
+use LeviLabs\LaravelFastpay\Contracts\FastpayQrServiceContract;
+use LeviLabs\LaravelFastpay\Data\PaymentValidationData;
+use LeviLabs\LaravelFastpay\Data\QrData;
+use LeviLabs\LaravelFastpay\Data\QrStatusData;
+use LeviLabs\LaravelFastpay\Data\RefundData;
 
 /**
  * @method static QrData generate(string $orderId, float $amount, ?string $store = null)

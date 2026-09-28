@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Full reference example for nizaamomer/laravel-fastpay.
+ * Full reference example for levilabs/laravel-fastpay.
  *
  * This is illustrative, not part of the package's autoload — copy what you
  * need into your own app. It assumes an App\Models\Order with a `total`
@@ -19,9 +19,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use Illuminate\Http\Request;
-use Nizaamomer\LaravelFastpay\Facades\FastpayPayment;
-use Nizaamomer\LaravelFastpay\Facades\FastpayQr;
-use Nizaamomer\LaravelFastpay\Models\FastpayPayment as FastpayPaymentModel;
+use LeviLabs\LaravelFastpay\Facades\FastpayPayment;
+use LeviLabs\LaravelFastpay\Facades\FastpayQr;
+use LeviLabs\LaravelFastpay\Models\FastpayPayment as FastpayPaymentModel;
 
 class PaymentController extends Controller
 {

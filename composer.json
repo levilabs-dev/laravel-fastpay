@@ -1,5 +1,5 @@
 {
-    "name": "nizaamomer/laravel-fastpay",
+    "name": "levilabs/laravel-fastpay",
     "description": "Modern Laravel SDK for FastPay Iraq: payment gateway initiation, validation, refunds, QR vending payments, IPN handling and mobile deep links.",
     "keywords": [
         "laravel",
@@ -10,14 +10,27 @@
         "qr",
         "refund",
         "sdk",
-        "iraq"
+        "iraq",
+        "levilabs"
     ],
-    "homepage": "https://github.com/nizaamomer/laravel-fastpay",
+    "homepage": "https://levilabs.dev",
     "license": "MIT",
+    "support": {
+        "issues": "https://github.com/levilabs-dev/laravel-fastpay/issues",
+        "source": "https://github.com/levilabs-dev/laravel-fastpay",
+        "docs": "https://github.com/levilabs-dev/laravel-fastpay#readme",
+        "security": "https://github.com/levilabs-dev/laravel-fastpay/security"
+    },
     "authors": [
         {
+            "name": "Levi Labs",
+            "email": "hello@levilabs.dev",
+            "homepage": "https://levilabs.dev",
+            "role": "Organization"
+        },
+        {
             "name": "Nizam Omer",
-            "email": "nizaamomer@gmail.com",
+            "email": "nizam@nizaamomer.com",
             "homepage": "https://nizaamomer.com",
             "role": "Developer"
         }
@@ -32,20 +45,20 @@
         "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
-        "larastan/larastan": "^2.9 || ^3.0",
-        "laravel/pint": "^1.17",
-        "orchestra/testbench": "^9.0 || ^10.0",
-        "pestphp/pest": "^3.0",
-        "pestphp/pest-plugin-laravel": "^3.0"
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.22",
+        "orchestra/testbench": "^9.0 || ^10.0 || ^11.0",
+        "pestphp/pest": "^3.7",
+        "pestphp/pest-plugin-laravel": "^3.2"
     },
     "autoload": {
         "psr-4": {
-            "Nizaamomer\\LaravelFastpay\\": "src/"
+            "LeviLabs\\LaravelFastpay\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Nizaamomer\\LaravelFastpay\\Tests\\": "tests/"
+            "LeviLabs\\LaravelFastpay\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -61,13 +74,16 @@
         }
     },
     "extra": {
+        "branch-alias": {
+            "dev-main": "1.0.x-dev"
+        },
         "laravel": {
             "providers": [
-                "Nizaamomer\\LaravelFastpay\\FastpayServiceProvider"
+                "LeviLabs\\LaravelFastpay\\FastpayServiceProvider"
             ],
             "aliases": {
-                "FastpayPayment": "Nizaamomer\\LaravelFastpay\\Facades\\FastpayPayment",
-                "FastpayQr": "Nizaamomer\\LaravelFastpay\\Facades\\FastpayQr"
+                "FastpayPayment": "LeviLabs\\LaravelFastpay\\Facades\\FastpayPayment",
+                "FastpayQr": "LeviLabs\\LaravelFastpay\\Facades\\FastpayQr"
             }
         }
     },

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Nizaamomer\LaravelFastpay\Console\Commands;
+namespace LeviLabs\LaravelFastpay\Console\Commands;
 
 use Illuminate\Console\Command;
-use Nizaamomer\LaravelFastpay\Contracts\FastpayPaymentServiceContract;
-use Nizaamomer\LaravelFastpay\Enums\PaymentStatus;
-use Nizaamomer\LaravelFastpay\Models\FastpayPayment;
+use LeviLabs\LaravelFastpay\Contracts\FastpayPaymentServiceContract;
+use LeviLabs\LaravelFastpay\Enums\PaymentStatus;
+use LeviLabs\LaravelFastpay\Models\FastpayPayment;
 use Throwable;
 
 /**

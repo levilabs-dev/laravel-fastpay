@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Nizaamomer\LaravelFastpay\Data;
+namespace LeviLabs\LaravelFastpay\Data;
 
 use Carbon\CarbonImmutable;
-use Nizaamomer\LaravelFastpay\Enums\PaymentStatus;
+use LeviLabs\LaravelFastpay\Enums\PaymentStatus;
 
 /**
  * The authoritative payment record returned by FastPay's validation API.

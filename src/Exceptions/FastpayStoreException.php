@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Nizaamomer\LaravelFastpay\Exceptions;
+namespace LeviLabs\LaravelFastpay\Exceptions;
 
 use RuntimeException;
 

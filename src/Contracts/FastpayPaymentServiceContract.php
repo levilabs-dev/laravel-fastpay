@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Nizaamomer\LaravelFastpay\Contracts;
+namespace LeviLabs\LaravelFastpay\Contracts;
 
-use Nizaamomer\LaravelFastpay\Data\CartItem;
-use Nizaamomer\LaravelFastpay\Data\PaymentInitiationData;
-use Nizaamomer\LaravelFastpay\Data\PaymentValidationData;
-use Nizaamomer\LaravelFastpay\Data\RefundData;
-use Nizaamomer\LaravelFastpay\Data\RefundValidationData;
+use LeviLabs\LaravelFastpay\Data\CartItem;
+use LeviLabs\LaravelFastpay\Data\PaymentInitiationData;
+use LeviLabs\LaravelFastpay\Data\PaymentValidationData;
+use LeviLabs\LaravelFastpay\Data\RefundData;
+use LeviLabs\LaravelFastpay\Data\RefundValidationData;
 
 interface FastpayPaymentServiceContract
 {

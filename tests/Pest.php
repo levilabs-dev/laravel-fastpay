@@ -3,6 +3,6 @@
 declare(strict_types=1);
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Nizaamomer\LaravelFastpay\Tests\TestCase;
+use LeviLabs\LaravelFastpay\Tests\TestCase;
 
 uses(TestCase::class, RefreshDatabase::class)->in(__DIR__);

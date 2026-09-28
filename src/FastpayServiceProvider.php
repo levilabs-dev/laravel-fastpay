@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Nizaamomer\LaravelFastpay;
+namespace LeviLabs\LaravelFastpay;
 
 use Illuminate\Support\Facades\Event;
-use Nizaamomer\LaravelFastpay\Console\Commands\SyncFastpayStatuses;
-use Nizaamomer\LaravelFastpay\Contracts\FastpayPaymentServiceContract;
-use Nizaamomer\LaravelFastpay\Contracts\FastpayQrServiceContract;
-use Nizaamomer\LaravelFastpay\Events\PaymentInitiated;
-use Nizaamomer\LaravelFastpay\Events\PaymentRefunded;
-use Nizaamomer\LaravelFastpay\Events\PaymentValidated;
-use Nizaamomer\LaravelFastpay\Listeners\PersistFastpayPayment;
-use Nizaamomer\LaravelFastpay\Services\FastpayPaymentService;
-use Nizaamomer\LaravelFastpay\Services\FastpayQrService;
+use LeviLabs\LaravelFastpay\Console\Commands\SyncFastpayStatuses;
+use LeviLabs\LaravelFastpay\Contracts\FastpayPaymentServiceContract;
+use LeviLabs\LaravelFastpay\Contracts\FastpayQrServiceContract;
+use LeviLabs\LaravelFastpay\Events\PaymentInitiated;
+use LeviLabs\LaravelFastpay\Events\PaymentRefunded;
+use LeviLabs\LaravelFastpay\Events\PaymentValidated;
+use LeviLabs\LaravelFastpay\Listeners\PersistFastpayPayment;
+use LeviLabs\LaravelFastpay\Services\FastpayPaymentService;
+use LeviLabs\LaravelFastpay\Services\FastpayQrService;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 

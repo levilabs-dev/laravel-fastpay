@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Nizaamomer\LaravelFastpay\Events;
+namespace LeviLabs\LaravelFastpay\Events;
 
 use Illuminate\Foundation\Events\Dispatchable;
-use Nizaamomer\LaravelFastpay\Data\RefundData;
+use LeviLabs\LaravelFastpay\Data\RefundData;
 
 final class PaymentRefunded
 {

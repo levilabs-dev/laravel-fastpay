@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Nizaamomer\LaravelFastpay\Support;
+namespace LeviLabs\LaravelFastpay\Support;
 
 /**
  * Builds FastPay mobile deep links.

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Nizaamomer\LaravelFastpay\Services\Concerns;
+namespace LeviLabs\LaravelFastpay\Services\Concerns;
 
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Http;
-use Nizaamomer\LaravelFastpay\Exceptions\FastpayException;
-use Nizaamomer\LaravelFastpay\Exceptions\FastpayStoreException;
+use LeviLabs\LaravelFastpay\Exceptions\FastpayException;
+use LeviLabs\LaravelFastpay\Exceptions\FastpayStoreException;
 
 trait TalksToFastpay
 {

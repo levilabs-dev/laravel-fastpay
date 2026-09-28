@@ -3,12 +3,12 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Http;
-use Nizaamomer\LaravelFastpay\Contracts\FastpayPaymentServiceContract;
-use Nizaamomer\LaravelFastpay\Data\PaymentInitiationData;
-use Nizaamomer\LaravelFastpay\Enums\PaymentStatus;
-use Nizaamomer\LaravelFastpay\Exceptions\FastpayException;
-use Nizaamomer\LaravelFastpay\Models\FastpayPayment;
-use Nizaamomer\LaravelFastpay\Models\FastpayRefund;
+use LeviLabs\LaravelFastpay\Contracts\FastpayPaymentServiceContract;
+use LeviLabs\LaravelFastpay\Data\PaymentInitiationData;
+use LeviLabs\LaravelFastpay\Enums\PaymentStatus;
+use LeviLabs\LaravelFastpay\Exceptions\FastpayException;
+use LeviLabs\LaravelFastpay\Models\FastpayPayment;
+use LeviLabs\LaravelFastpay\Models\FastpayRefund;
 
 it('initiates a payment and persists it', function () {
     Http::fake([
