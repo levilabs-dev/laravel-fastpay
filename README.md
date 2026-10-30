@@ -18,7 +18,6 @@ Maintained by **[Levi Labs](https://levilabs.dev)** ([GitHub](https://github.com
 - [Why one package?](#why-one-package)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Using with other Levi Labs payment packages](#using-with-other-levi-labs-payment-packages)
 - [Part 1 — Payment Gateway (Web)](#part-1--payment-gateway-web)
   - [Initiating a payment](#initiating-a-payment)
   - [The IPN webhook — never trust the payload](#the-ipn-webhook--never-trust-the-payload)
@@ -87,21 +86,6 @@ All three parts share the same `FASTPAY_STORE_ID`/`FASTPAY_STORE_PASSWORD` — n
 - `success_url`/`cancel_url`/`callback_url` — Part 1 only (the web redirect flow).
 - `client_uri` — Part 3 only, and only required once you actually call `deepLink()` (see [Part 3](#part-3--mobile-deep-links)); omit it entirely if your app never opens the FastPay app directly.
 - Parts 2 and 3 otherwise need no config beyond the shared store credentials above.
-
-## Using with other Levi Labs payment packages
-
-**laravel-fib**, **laravel-fastpay**, **laravel-qicard**, and **laravel-wayl** can be installed in the same Laravel application. They do not share database tables, config files, or facade aliases — each package is namespaced and prefixed:
-
-| Package | Composer | Config · env prefix | Database tables | Status sync |
-| --- | --- | --- | --- | --- |
-| FIB | `levilabs/laravel-fib` | `config/fib.php` · `FIB_*` | `fib_payments`, `fib_payouts`, `fib_refunds` | `php artisan fib:sync-statuses` |
-| FastPay | `levilabs/laravel-fastpay` | `config/fastpay.php` · `FASTPAY_*` | `fastpay_payments`, `fastpay_refunds` | `php artisan fastpay:sync-statuses` |
-| QiCard | `levilabs/laravel-qicard` | `config/qicard.php` · `QICARD_*` | `qicard_payments`, `qicard_refunds` | `php artisan qicard:sync-statuses` |
-| Wayl | `levilabs/laravel-wayl` | `config/wayl.php` · `WAYL_*` | `wayl_links`, `wayl_refunds` | `php artisan wayl:sync-statuses` |
-
-Install only the gateways you need, publish each config tag you use (`fib-config`, `fastpay-config`, `qicard-config`, `wayl-config`), and run **`php artisan migrate` once** — Laravel applies every installed package migration. Eloquent models live under `LeviLabs\LaravelFib\Models\*`, `LeviLabs\LaravelFastpay\Models\*`, and so on; facades are `FibPayment`, `FastpayPayment`, `QicardPayment`, `WaylLink`, etc., with no name clashes.
-
-Wire **separate webhook routes and `.env` credentials per gateway** in your app (for example `/fib/callback`, `/fastpay/ipn`, `/qicard/webhook`, `/wayl/webhook`). These packages do not choose a default payment method for you.
 
 <!--
 ### Multiple stores
